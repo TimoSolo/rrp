@@ -1,0 +1,39 @@
+<ion-view view-title="Podcasts">
+  <ion-content  lazy-scroll nong-class="(app.currentPod)?'has-subheader':''" style="padding-right:10px;">
+
+
+        <!-- <section class="lead-text col-xs-12" >
+        <h1 class="page-title">Unlock Your Best Self</h1>
+        <h2>With Rich Roll - Bestselling Author, Ultra-Endurance Athlete &amp; Wellness Evangelist</h1>
+        </section> -->
+        <div style="padding:10px 0px 0 10px; " class="col-sm-6 col-xs-12" ng-repeat="pod in pods" type="item-text-wrap" >
+          <div style="background-color: #eee; text-align:center" >
+          <a href="#/tab/chats/{{pod.id}}" style="position:relative; display:block; width:100%;" >
+            
+                        <img src="img/placeholder.jpg" style="display:block; width:100%; height:auto; margin:auto; "  /> 
+                        <h3 style="color:#fff; min-height:200px; position:absolute; top:0; left:0; width:100%; padding:20px; margin:0">{{pod.name}}</h3>
+                        <img image-lazy-src="{{pod.img}}" style="position:absolute; top:0; left:0; display:block; width:100%; height:auto; margin:auto; "  /> 
+
+              </a>
+          </div>
+        </div>
+
+
+
+
+
+<!-- 
+
+    <ion-list>
+      <ion-item style="padding:0" ng-repeat="pod in pods" type="item-text-wrap" >
+        <div href="#/tab/chats/{{pod.id}}" style="display:block; max-height:200px; overlow:nothidden; width:100%; padding:0; margin:auto;">
+          <img src="img/placeholder.jpg" image-lazy-src="{{pod.img}}" style="display:block; width:100%; max-width:600px; height:auto; margin:auto; ">
+        </div>
+        <h2>{{pod.name}}</h2>
+        
+      </ion-item>
+    </ion-list> -->
+
+
+  </ion-content>
+</ion-view>

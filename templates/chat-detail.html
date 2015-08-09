@@ -1,0 +1,37 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="#{{vm.pod.num}} {{vm.pod.name}}"> 
+
+<!-- <div class="bar bar-subheader bar-stable" style="margin-top:43px;">
+    <audio id="player" controls style="width:100%" src="{{vm.pod.mp3 | trusted}}" >
+    Sorry, this device doesnt support this audio player!
+    </audio>
+    </div> -->
+
+<!-- <ion-nav-bar>
+  <ion-nav-buttons side="left" class="button button-clear"
+    ng-click="$ionicHistory.goBack(); ">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-buttons>
+</ion-nav-bar> -->
+
+
+  <ion-content class="padding  ">
+
+
+
+    <img src="{{vm.pod.img}}" style="display:block; padding-top: 5px; width:100%; max-width:500px; height:auto; margin:auto; "  />
+    <div style="text-align:center">
+    <audio id="player" controls style="margin-left:auto; margin-right:auto; width:100%; max-width:500px;" src="{{vm.pod.mp3}}" >
+</audio>
+</div>
+    <h2>RRP #{{vm.pod.num}}: {{vm.pod.name}}</h2>
+    <p style="white-space:pre-line">
+      {{vm.pod.long}}
+    </p>
+  </ion-content>
+</ion-view>
