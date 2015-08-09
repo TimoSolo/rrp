@@ -46,8 +46,8 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 
 
    	} else {
-        //$http.get("http://www.richroll.com/feed/RRPodcastRSS/")
-        $http.get("pods.xml") // local
+        $http.get("http://www.richroll.com/feed/RRPodcastRSS/")
+        //$http.get("pods.xml") // local
             .success(function(data) {
                 console.log("got the data!");
                 var json = xmlToJSON.parseString(data);
