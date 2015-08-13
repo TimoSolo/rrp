@@ -41,8 +41,8 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
   $scope.pods = [];
   this.reloadFeed = function() {
   		//TODO show loading page
-  		$http.get("http://www.richroll.com/feed/RRPodcastRSS/")
-        //$http.get("pods.xml") // local
+  		//$http.get("http://www.richroll.com/feed/RRPodcastRSS/")
+        $http.get("fullpods.xml") // local
             .success(this.loadFeed)
             .error(function(data) {
                 console.log("ERROR: " + data);
