@@ -86,11 +86,11 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 
    	} else {
 
-   		$http.get("pods.xml") // local
-            .success(this.loadFeed)
-            .error(function(data) {
-                console.log("ERROR: " + data);
-            });
+   		// $http.get("pods.xml") // local
+     //        .success(this.loadFeed)
+     //        .error(function(data) {
+     //            console.log("ERROR: " + data);
+     //        });
    		this.reloadFeed(); // big one
    	}
     //}
