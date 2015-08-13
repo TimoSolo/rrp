@@ -6,8 +6,7 @@
         xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
         xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
         xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
->
+		xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/">
 <channel>
         <title>Rich Roll - Feed</title>
         <atom:link href="http://www.richroll.com/feed/RRPodcastRSS/" rel="self" type="application/rss+xml" />
@@ -17,8 +16,6 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
         <language></language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        
-<!-- podcast_generator="Blubrry PowerPress/4.0.5" -->
 	<itunes:summary>Unlock your best self! Rich Roll -- ultra-athlete and author of the #1 bestsellers &quot;Finding Ultra&quot; &amp; &quot;The Plantpower Way&quot; -- delves deep into all things wellness with some of the brightest and most forward thinking, paradigm busting minds in health, fitness, nutrition, creativity, entrepreneurship &amp; spirituality -- including world-class athletes, doctors, nutritionists, authors, entrepreneurs, spiritualists &amp; artists.  Topics include: general health; food policy &amp; politics; fitness; environmentalism and sustainable lifestyle practices; meditation, yoga, mindfulness and spirituality; vegan &amp; plant-based nutrition; and more. Rich&#039;s goal is simple: to educate, inspire and empower YOU to discover, unlock &amp; unleash your best, most authentic self.</itunes:summary>
 	<itunes:author>Unlock Your Best Self | Rich Roll | Bestselling Author, Ultra-Endurance Athlete &amp; Wellness Evangelist</itunes:author>
 	<itunes:explicit>no</itunes:explicit>

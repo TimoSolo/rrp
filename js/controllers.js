@@ -61,7 +61,7 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 		   			  id: i,
 		   			  num: total-i,
 		              name: p.title[0]._text,
-		              img: p.image[0]._text,
+		              img: p.image && p.image[0] && p.image[0]._text || "",
 		              long: p.fullsummary && p.fullsummary[0] && p.fullsummary[0]._text || p.subtitle[0]._text,
 		              short: p.subtitle[0]._text,
 		              mp3: p.enclosure[0]._attr.url._value,
