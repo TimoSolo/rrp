@@ -39,16 +39,16 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 .controller('ChatsCtrl', function($scope, $http, $window, Chats) {
   //$scope.chats = Chats.all();
   $scope.pods = [];
-   //$scope.init = function() {
-   	if ($window.sessionStorage.pods) {
-   		// use stored. todo refresh if old + online
-   		$scope.pods = angular.fromJson($window.sessionStorage.pods);
-
-
-   	} else {
-        $http.get("http://www.richroll.com/feed/RRPodcastRSS/")
+  this.reloadFeed = function() {
+  		//TODO show loading page
+  		$http.get("http://www.richroll.com/feed/RRPodcastRSS/")
         //$http.get("pods.xml") // local
-            .success(function(data) {
+            .success(this.loadFeed)
+            .error(function(data) {
+                console.log("ERROR: " + data);
+            });
+        }
+    this.loadFeed = function(data) {
                 console.log("got the data!");
                 var json = xmlToJSON.parseString(data);
 		   		console.log("got stored pods");
@@ -62,7 +62,7 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 		   			  num: total-i,
 		              name: p.title[0]._text,
 		              img: p.image[0]._text,
-		              long: p.summary[0]._text,
+		              long: p.fullsummary && p.fullsummary[0] && p.fullsummary[0]._text || p.subtitle[0]._text,
 		              short: p.subtitle[0]._text,
 		              mp3: p.enclosure[0]._attr.url._value,
 		              date: p.pubDate[0]._text,
@@ -73,11 +73,25 @@ angular.module('starter.controllers', ['ionicLazyLoad'])
 		   		$scope.pods = pods;
                 $window.sessionStorage.pods = JSON.stringify(pods);
                 //var json = xmlToJSON.parseString(data);
-            })
+            }
+
+
+  		
+
+   //$scope.init = function() {
+   	if ($window.sessionStorage.pods) {
+   		// use stored. todo refresh if old + online
+   		$scope.pods = angular.fromJson($window.sessionStorage.pods);
+
+
+   	} else {
+
+   		$http.get("pods.xml") // local
+            .success(this.loadFeed)
             .error(function(data) {
                 console.log("ERROR: " + data);
             });
-   	
+   		this.reloadFeed(); // big one
    	}
     //}
 })

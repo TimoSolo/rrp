@@ -26,7 +26,7 @@
 
     <img src="{{vm.pod.img}}" style="display:block; padding-top: 5px; width:100%; max-width:500px; height:auto; margin:auto; "  />
     <div style="text-align:center">
-    <audio id="player" controls style="margin-left:auto; margin-right:auto; width:100%; max-width:500px;" src="{{vm.pod.mp3}}" >
+    <audio id="player" controls style="margin-left:auto; margin-right:auto; width:100%; max-width:500px;" src="{{vm.pod.mp3 | trusted}}" >
 </audio>
 </div>
     <h2>RRP #{{vm.pod.num}}: {{vm.pod.name}}</h2>
